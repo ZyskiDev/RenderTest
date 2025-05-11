@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "rendertest",
+  "version": "${version}",
+  "name": "RenderTest",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/rendertest/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.zyski.rendertest.client.RendertestClient"
+    ],
+    "main": [
+      "net.zyski.rendertest.Rendertest"
+    ]
+  },
+  "mixins": [
+    "rendertest.mixins.json",
+    {
+      "config": "rendertest.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
