@@ -29,7 +29,7 @@ public class ChunkRendererSchematicVboMixin {
     protected ChunkCacheSchematic schematicWorldView;
 
     @Inject(method = "renderBlocksAndOverlay", at = @At("HEAD"), cancellable = true)
-    public void renderBlocksAndOverlay(BlockPos pos, ChunkRenderDataSchematic data, BufferAllocatorCache allocators, Set<BlockEntity> tileEntities, Set<RenderType> usedLayers, PoseStack matrixStack, CallbackInfo ci) {
+    public void renderBlocksAndOverlay(BlockPos pos, ChunkRenderDataSchematic data, BufferAllocatorCache allocators, Set<RenderType> usedLayers, PoseStack matrixStack, CallbackInfo ci) {
         if (RendertestClient.specific) {
             ItemStack held = Minecraft.getInstance().player.getMainHandItem();
             Item heldItem = held.getItem();
